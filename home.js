@@ -67,10 +67,20 @@ function fixStepIndicator(n) {
 function generateQueueNumber() {
     var date = new Date();
     var dateString = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0');
-    var lastNumber = localStorage.getItem('lastNumber') || 0;  // Ambil nomor terakhir atau gunakan 0 jika belum ada
-    var nextNumber = parseInt(lastNumber) + 1;  // Tambahkan 1 ke nomor terakhir
-    localStorage.setItem('lastNumber', nextNumber);  // Simpan nomor baru sebagai nomor terakhir
-    return dateString + '-' + nextNumber.toString().padStart(4, '0');  // Gunakan padStart untuk memastikan ada 4 digit
+    
+    var lastDate = localStorage.getItem('lastDate');
+    var lastNumber = localStorage.getItem('lastNumber') || 0;
+    
+    if (lastDate !== dateString) {
+        // Jika tanggal berubah, atur ulang nomor antrian
+        lastNumber = 0;
+        localStorage.setItem('lastDate', dateString);
+    }
+    
+    var nextNumber = parseInt(lastNumber) + 1;
+    localStorage.setItem('lastNumber', nextNumber);
+    
+    return dateString + '-' + nextNumber.toString().padStart(4, '0');
 }
 
 
