@@ -1,0 +1,190 @@
+/* Aturan umum untuk tampilan cetak */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('2022E25E28EB99D4F2396DCDADE6130E3A9AA01F_size353_w1920_h1071.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    zoom: 1.5;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: auto;
+
+}
+
+.left-side {
+    padding: 40px;
+    background-color: rgba(0, 64, 128, 0.7);
+    color: white;
+    text-align: center;
+
+}
+
+.hospital-img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+
+
+.right-side {
+    padding: 40px;
+    background-color: white;
+
+
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    width: max-content;
+}
+
+.print-button {
+    background-color: #001f4d;
+    color: white;
+    padding: 15px 30px;
+    /* Padding yang diperbesar */
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    /* Menghilangkan border default tombol */
+}
+
+#qrcode {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Aturan untuk tampilan cetak */
+@media print {
+    body {
+        background-color: white;
+        /* Hapus background gambar pada mode cetak */
+    }
+
+    .form-container {
+        zoom: 1;
+        display: block;
+        /* Atur agar elemen ditampilkan dalam format kolom */
+        width: 90%;
+        /* Sesuaikan lebar untuk cetak */
+        box-shadow: none;
+        /* Hilangkan shadow pada mode cetak */
+    }
+
+    .left-side {
+        display: block;
+        /* Pastikan bagian kiri tampil pada mode cetak */
+        width: 100%;
+        /* Lebar penuh saat cetak */
+        background-color: #001f4d;
+        /* Warna latar belakang tetap */
+        color: white;
+        /* Warna teks tetap */
+        padding: 20px;
+        /* Sesuaikan padding untuk cetak */
+        box-sizing: border-box;
+        /* Pastikan padding tidak mempengaruhi ukuran */
+    }
+
+    .right-side {
+        display: block;
+        /* Pastikan bagian kanan tampil pada mode cetak */
+        width: 100%;
+        /* Lebar penuh saat cetak */
+        padding: 20px;
+        /* Sesuaikan padding untuk cetak */
+        border-radius: 0;
+        box-sizing: border-box;
+        /* Pastikan padding tidak mempengaruhi ukuran */
+    }
+
+    .hospital-img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .print-button {
+        display: none;
+        /* Sembunyikan tombol cetak saat mencetak */
+    }
+}
+
+
+/* Aturan responsif untuk layar kecil */
+@media (max-width: 800px) {
+    .form-container {
+        flex-direction: column;
+        /* Tumpuk kolom secara vertikal saat layar kecil */
+        width: 90%;
+        height: auto;
+        margin: auto;
+        zoom: 1;
+    }
+
+    .left-side,
+    .right-side {
+        padding: 20px;
+        /* Sesuaikan padding untuk layar kecil */
+        width: 100%;
+        flex: 1;
+        box-sizing: border-box;
+    }
+
+    .hospital-img {
+        width: 100px;
+        /* Kurangi ukuran gambar untuk layar kecil */
+    }
+
+    h1,
+    h2 {
+        font-size: 1.2em;
+        /* Sesuaikan ukuran teks untuk layar kecil */
+    }
+
+    .print-button {
+        width: 100%;
+        /* Buat tombol mengambil lebar penuh pada layar kecil */
+        padding: 10px;
+    }
+}

@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('2022E25E28EB99D4F2396DCDADE6130E3A9AA01F_size353_w1920_h1071.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.form-container {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    zoom: 1.5;
+}
+
+.left-side {
+    padding: 40px;
+    background-color: rgba(0, 64, 128, 0.7);
+    color: white;
+    text-align: center;
+}
+
+.hospital-img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+.right-side {
+    padding: 40px;
+    background-color: white;
+
+}
+
+h2 {
+    margin-top: 0;
+}
+
+textarea,
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #001f4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.step {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #001f4d;
+}
+
+.tab {
+    display: none;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.radio input[type="radio"] {
+    display: none;
+}
+
+.radio label {
+    position: relative;
+    color: #001f4d;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    gap: 0.8em;
+    border: 1px solid #001f4d;
+    padding: 1em 2em;
+
+    margin-bottom: 20px;
+}
+
+.radio input[type="radio"]:checked+label:before {
+    width: 100%;
+    padding: 20px;
+    border: 0.01em solid #ffffff;
+    background-color: #001f4d;
+}
+
+.radio input[type="radio"]:checked+label {
+    background-color: #001f4d;
+    color: #ffffff;
+}
+
+/* Aturan responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+        /* Tumpuk kolom secara vertikal saat layar kecil */
+        width: 90%;
+        height: auto;
+        margin: auto;
+        zoom: 1;
+    }
+
+    .left-side,
+    .right-side {
+        padding: 20px;
+        /* Sesuaikan padding untuk layar kecil */
+        width: 100%;
+        flex: 1;
+        box-sizing: border-box;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .hospital-img {
+        width: 100px;
+        /* Kurangi ukuran gambar untuk layar kecil */
+    }
+
+    h1,
+    h2 {
+        font-size: 1em;
+        /* Sesuaikan ukuran teks untuk layar kecil */
+    }
+
+
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pendaftaran</title>
+    <link rel="stylesheet" href="print.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <!-- Bagian kiri dengan pesan selamat datang dan gambar -->
+        <div class="left-side">
+            <h1>Pendaftaran Berhasil</h1>
+            <img src="freepik-export-20240805121131snIm.png" alt="Gedung Rumah Sakit" class="hospital-img">
+            <h2>Rumah Sakit Schematics<br>Institut Teknologi Sepuluh Nopember</h2>
+            <div id="qrcode"></div>
+        </div>
+        <!-- Bagian kanan dengan hasil data pendaftaran -->
+        <div class="right-side">
+            <h2>Hasil Pendaftaran</h2>
+            <table>
+                <tr>
+                    <th>Nomor Antrian</th>
+                    <td><span id="queueNumber"></span></td>
+                </tr>
+                <tr>
+                    <th>Nama Lengkap</th>
+                    <td><span id="fname"></span> <span id="lname"></span></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><span id="email"></span></td>
+                </tr>
+                <tr>
+                    <th>Nomor Telepon</th>
+                    <td><span id="phone"></span></td>
+                </tr>
+                <tr>
+                    <th>Tanggal Lahir</th>
+                    <td><span id="birthday"></span></td>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin</th>
+                    <td><span id="gender"></span></td>
+                </tr>
+                <tr>
+                    <th>Jenis Kunjungan</th>
+                    <td><span id="jeniskunjungan"></span></td>
+                </tr>
+                <tr>
+                    <th>Tujuan Poli</th>
+                    <td><span id="unit"></span></td>
+                </tr>
+                <tr>
+                    <th>Keluhan</th>
+                    <td><span id="keluhan"></span></td>
+                </tr>
+            </table>
+            <div style="text-align:center;margin-top:40px;">
+                <button type="button" class="print-button" onclick="printAndRedirect()">Cetak</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menyertakan file JavaScript -->
+    <script src="print.js"></script>
+</body>
+
+</html>

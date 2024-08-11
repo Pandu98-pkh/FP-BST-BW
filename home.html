@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <!-- Bagian kiri dengan pesan selamat datang dan gambar -->
+        <div class="left-side">
+            <h1>Selamat Datang</h1>
+            <img src="freepik-export-20240805121131snIm.png" alt="Gedung Rumah Sakit" class="hospital-img">
+            <h2>Rumah Sakit Schematics<br>Institut Teknologi Sepuluh Nopember</h2>
+        </div>
+        <!-- Bagian kanan dengan form multi-tab -->
+        <div class="right-side">
+            <form id="regForm">
+                <h2>Formulir Pendaftaran</h2>
+                <!-- Tab 4: gender -->
+                <div class="tab">
+                    <p><label>Jenis Kunjungan :</label></p>
+                    <select id="jeniskunjungan" oninput="this.className = ''" name="jeniskunjungan" required>
+                        <option value="">Pilih..</option>
+                        <option value="Datang Sendiri">Datang Sendiri</option>
+                        <option value="Rujukan Puskesmas/Klinik/Dokter">Rujukan Puskesmas/Klinik/Dokter</option>
+                        <option value="Rujukan RS Lain">Rujukan RS Lain</option>
+                        <option value="Kontrol">Kontrol</option>
+                    </select>
+                    <p><label>Poli Tujuan :</label></p>
+                    <select id="unit" oninput="this.className = ''" name="unit" required>
+                        <option value="">Pilih..</option>
+                        <option value="Anak, K">Anak, K</option>
+                        <option value="Andrologi, K">Andrologi, K</option>
+                        <option value="Bedah Digestif">Bedah Digestif</option>
+                        <option value="Bedah Plastik, K">Bedah Plastik, K</option>
+                        <option value="Bedah Syaraf, K">Bedah Syaraf, K</option>
+                        <option value="Bedah TKV, K">Bedah TKV, K</option>Bedah Umum, K</option>
+                        <option value="Bedah Urologi, K">Bedah Urologi, K</option>
+                        <option value="CST, K">CST, K</option>
+                        <option value="Gigi Bedah Mulut, K">Gigi Bedah Mulut, K</option>
+                        <option value="Gigi Endodonsi, K">Gigi Endodonsi, K</option>
+                        <option value="Gigi Orthodonti, K">Gigi Orthodonti, K</option>
+                        <option value="Gigi Pedodontis, K">Gigi Pedodontis, K</option>
+                        <option value="Gigi Penyakit Mulut, K">Gigi Penyakit Mulut, K</option>
+                        <option value="Gigi, K">Gigi, K</option>
+                        <option value="Gizi, K">Gizi, K</option>
+                        <option value="Hematologi Onkologi Medis, K">Hematologi Onkologi Medis, K</option>
+                        <option value="Jantung, K">Jantung, K</option>
+                        <option value="Komplementer">Komplementer</option>
+                        <option value="Kulit dan Kelamin, K">Kulit dan Kelamin, K</option>
+                        <option value="Mata, K">Mata, K</option>
+                        <option value="Obsgyn, K">Obsgyn, K</option>
+                        <option value="Onkologi Paru, K">Onkologi Paru, K</option>
+                        <option value="Orthopedi 2, K">Orthopedi 2, K</option>
+                        <option value="Orthopedi, K">Orthopedi, K</option>
+                        <option value="Paru, K">Paru, K</option>
+                        <option value="Penyakit Dalam 1, K">Penyakit Dalam 1, K</option>
+                        <option value="Penyakit Dalam 2 (DIABET), K">Penyakit Dalam 2 (DIABET), K</option>
+                        <option value="Psikiatri 2, K">Psikiatri 2, K</option>
+                        <option value="Psikiatri, K">Psikiatri, K</option>
+                        <option value="Psikologi, K">Psikologi, K</option>
+                        <option value="Rehabilitasi Medik, K">Rehabilitasi Medik, K</option>
+                        <option value="Syaraf, K">Syaraf, K</option>
+                        <option value="TB RO, K">TB RO, K</option>
+                        <option value="THT, K">THT, K</option>
+                    </select>
+                </div>
+                <!-- Tab 1: Nama -->
+                <div class="tab">
+                    <p><label>Nama:</label></p>
+                    <p><input type="text" placeholder="Masukkan Nama Depan Anda" oninput="this.className = ''"
+                            name="fname"></p>
+                    <p><input type="text" placeholder="Masukkan Nama Belakang Anda" oninput="this.className = ''"
+                            name="lname"></p>
+                </div>
+
+                <!-- Tab 4: gender -->
+                <div class="tab">
+                    <p><label>Jenis Kelamin :</label></p>
+                    <div class="radio">
+                        <input type="radio" name="gender" id="Laki-laki" value="Laki-laki" checked="checked" />
+                        <label for="Laki-laki">Laki-laki</label>
+                        <input type="radio" name="gender" id="Perempuan" value="Perempuan" />
+                        <label for="Perempuan">Perempuan</label>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Kontak -->
+                <div class="tab">
+                    <p><label>Kontak:</label></p>
+                    <p><input type="email" placeholder="Masukkan Email Anda" oninput="this.className = ''" name="email">
+                    </p>
+                    <p><input type="tel" placeholder="Masukkan Nomor Telepon Anda" oninput="this.className = ''"
+                            name="phone"></p>
+                </div>
+
+                <!-- Tab 3: Tanggal Lahir -->
+                <div class="tab">
+                    <p><label>Tanggal Lahir:</label></p>
+                    <p><input type="date" placeholder="dd" oninput="this.className = ''" name="dd"></p>
+
+                </div>
+
+                <!-- Tab 3: Tanggal Lahir -->
+                <div class="tab">
+                    <p><label>Keluhan:</label></p>
+                    <p><textarea id="Keluhan" placeholder="Silahkan isi Keluhan . . ." rows="10" cols="30"></textarea>
+                    </p>
+
+                </div>
+
+
+                <!-- Tombol navigasi antar tab -->
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Kembali</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Lanjut</button>
+                    </div>
+                </div>
+
+                <!-- Indikator langkah (step indicators) -->
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Menyertakan file JavaScript -->
+    <script src="home.js"></script>
+</body>
+
+</html>
